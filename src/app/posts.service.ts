@@ -33,7 +33,7 @@ export class PostsService {
       headers: new HttpHeaders({ Auth: 'Auth Token' }),
       params
     };
-    return this.http.get<{ [key: string]: Post }>('https://angular-guide-http-3a13311.firebaseio.com/posts.json',
+    return this.http.get<Post>('https://angular-guide-http-3a13311.firebaseio.com/posts.json',
       options
     )
       .pipe(
